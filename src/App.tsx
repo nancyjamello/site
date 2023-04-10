@@ -168,8 +168,10 @@ const App = () => {
             </Text>
           </Box>
         </Box>
-      </Box>
+        <iframe src="https://drive.google.com/file/d/0B11pE_9lXspgeVMzTDlsZGMxb2M/preview?resourceKey=0-tkDZJZclZCBJXvYy8VvECA" width="640" height="480" allow="autoplay"></iframe>
+        </Box>
     </ChakraProvider>
+    
   );
 };
 
