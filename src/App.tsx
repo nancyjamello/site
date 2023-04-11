@@ -10,30 +10,29 @@ import Video from "./Video";
 import Videos from "./Videos";
 
 const App = () => {
+  console.log(fetch("/api/redirect?password=gribble"));
   return (
     <ChakraProvider>
+
       <Box
         as="header"
+        position="fixed"
         w="100%"
         h="50px"
-        bg="#FFFFAE2"
+        bg="white"
         color="white"
         display="flex"
         alignItems="center"
         justifyContent="center"
         padding="20px"
         gap="40px"
+        zIndex="2000"
       >
         <Text fontFamily="caveat" fontSize="4xl" color="#a03576">
           Yoga with Nancy
         </Text>
         <Spacer />
-        <Link
-          fontFamily="caveat"
-          fontSize="3xl"
-          color="#a03576"
-          href="./"
-        >
+        <Link fontFamily="caveat" fontSize="3xl" color="#a03576" href="./">
           Info
         </Link>
         <Link
@@ -45,13 +44,15 @@ const App = () => {
           Videos
         </Link>
       </Box>
-      <BrowserRouter>
-        <Routes>
-          <Route path="/" element={<About />} />
-          <Route path="/video" element={<Video />} />
-          <Route path="/videos" element={<Videos />} />
-        </Routes>
-      </BrowserRouter>
+      <Box as="main" w="100%" h="calc(100vh)">
+        <BrowserRouter>
+          <Routes>
+            <Route path="/" element={<About />} />
+            <Route path="/video" element={<Video />} />
+            <Route path="/videos" element={<Videos />} />
+          </Routes>
+        </BrowserRouter>
+      </Box>
     </ChakraProvider>
   );
 };
