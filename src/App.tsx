@@ -13,7 +13,6 @@ const App = () => {
   console.log(fetch("/api/redirect?password=gribble"));
   return (
     <ChakraProvider>
-
       <Box
         as="header"
         position="fixed"
@@ -28,9 +27,9 @@ const App = () => {
         gap="40px"
         zIndex="2000"
       >
-        <Text fontFamily="caveat" fontSize="4xl" color="#a03576">
+        <Link fontFamily="caveat" fontSize="4xl" color="#a03576" href="./">
           Yoga with Nancy
-        </Text>
+        </Link>
         <Spacer />
         <Link fontFamily="caveat" fontSize="3xl" color="#a03576" href="./">
           Info

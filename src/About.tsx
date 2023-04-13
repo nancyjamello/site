@@ -4,13 +4,6 @@ import "@fontsource/literata";
 import "@fontsource/inter";
 import "@fontsource/caveat";
 
-const images = [
-  "https://images.squarespace-cdn.com/content/v1/5966811bf5e231568774f4c2/1500159781937-7S35ZUKYBN7IIXK5J6SM/Stocksy_txpdbbfa43erqZ100_Medium_599859.jpg?format=2500w",
-  "https://images.unsplash.com/photo-1507525428034-b723cf961d3e",
-  "https://images.unsplash.com/photo-1504198453319-5ce911bafcde",
-  "https://images.unsplash.com/photo-1503431128871-cd250803fa41",
-];
-
 const About = () => {
   return (
     <Box as="main" w="100%" h="calc(100vh)" overflowX="scroll">
