@@ -8,6 +8,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import About from "./About";
 import Video from "./Video";
 import Videos from "./Videos";
+import VideoModal from "./VideoModal";
 
 const App = () => {
   return (
@@ -49,6 +50,7 @@ const App = () => {
               <Route path="/" element={<About />} />
               <Route path="/video" element={<Video />} />
               <Route path="/videos" element={<Videos />} />
+              <Route path="/videomodal" element={<VideoModal videoindex={0} />} />
             </Routes>
           </BrowserRouter>
         </Box>

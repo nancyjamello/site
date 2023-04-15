@@ -1,27 +1,65 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+import { useLocation } from "react-router-dom";
 import { Box, Text } from "@chakra-ui/react";
 
+// Define an interface for the props of the VideoPlayer component
+interface VideoProps {
+  url: string; // The videoindex prop is a number
+}
+
+// Define a type guard function that checks if the url starts with http
+function isValidUrl(url: string | null): url is string {
+  return !!url && url.startsWith("http");
+}
+
 const Video = () => {
+  const location = useLocation(); // get the location object
+  const searchParams = new URLSearchParams(location.search); // parse the search string
+  let value: string = searchParams.get("url") || ""; // get the url parameter value
+
+  // Use a state variable to store the error message
+  const [error, setError] = useState<string>("");
+
+  // Use a state variable to store the url value
+  const [url, setUrl] = useState<string>("http://");
+
+  // Use a useEffect hook to validate the url and set the error message
+  useEffect(() => {
+    let validValue: boolean | null = isValidUrl(value); // get the value from somewhere
+    let flag: boolean = validValue || false;
+
+    if (flag) {
+      setUrl(value); // set the url value if valid
+      setError(""); // clear the error message if valid
+    } else {
+      setError("Invalid url format"); // set the error message if invalid
+    }
+  }, [value]); // use value as a dependency
+
+  useEffect(() => {
+    console.log("MyComponent is created"); // log a message
+    console.log({url}); // log the props object
+  }, ); // empty dependency array
+
   return (
-    <Box as="main" w="100%" h="100%">
-      <Box
-        w="100vw"
-        h="100%"
-        bgImage={`url(https://images.squarespace-cdn.com/content/v1/5966811bf5e231568774f4c2/1500159781937-7S35ZUKYBN7IIXK5J6SM/Stocksy_txpdbbfa43erqZ100_Medium_599859.jpg?format=2500w)`}
-        bgSize="cover"
-        bgPosition="center"
-        display="flex"
-        flexDirection="column"
-        alignItems="center"
-        justifyContent="center"
-      >
+    <Box
+      as="main"
+      w="calc(100vw)"
+      h="calc(100vh)"
+      display="flex"
+      flexDirection="column"
+      alignItems="center"
+    >
+      {error ? (
+        <Text color="red">{error}</Text> // display the error text if present
+      ) : (
         <iframe
-          src="https://drive.google.com/file/d/0B11pE_9lXspgeVMzTDlsZGMxb2M/preview?resourceKey=0-tkDZJZclZCBJXvYy8VvECA"
-          width="100%"
-          height="100%"
+          src={url}
+          width="calc(100vw)"
+          height="calc(100vh)"
           allow="autoplay"
         ></iframe>
-      </Box>
+      )}
     </Box>
   );
 };

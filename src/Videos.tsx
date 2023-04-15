@@ -8,11 +8,15 @@ const Videos = () => {
     <Box
         display="flex"
         flexDirection="column"
+        alignItems="center"
+        justifyContent="center"
+        background="#f8f8f8"
+        gap="5px"
       >
-      <VideoSummary />
-      <VideoSummary />
-      <VideoSummary />
-      <VideoSummary />
+      <VideoSummary index={0}/>
+      <VideoSummary index={1}/>
+      <VideoSummary index={2}/>
+      <VideoSummary index={3}/>
     </Box>
   );
 };
