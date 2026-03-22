@@ -83,3 +83,13 @@ body {
 .shake {
   animation: shake 0.5s ease;
 }
+
+.mobile-only {
+  display: flex;
+}
+
+@media (min-width: 768px) {
+  .mobile-only {
+    display: none;
+  }
+}

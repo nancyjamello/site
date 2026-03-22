@@ -99,16 +99,23 @@ const App = () => {
           </nav>
 
           {/* Mobile hamburger button */}
-          <Box
-            display={{ base: "flex", md: "none" }}
-            flexDirection="column"
-            justifyContent="center"
-            gap="5px"
-            w="28px"
-            h="28px"
-            cursor="pointer"
+          <button
+            type="button"
+            className="mobile-only"
             onClick={() => setMenuOpen(!menuOpen)}
             aria-label="Menu"
+            aria-expanded={menuOpen}
+            style={{
+              flexDirection: "column",
+              justifyContent: "center",
+              gap: "5px",
+              width: "28px",
+              height: "28px",
+              cursor: "pointer",
+              background: "none",
+              border: "none",
+              padding: 0,
+            }}
           >
             <Box
               h="2px"
@@ -131,7 +138,7 @@ const App = () => {
               transition="all 0.3s"
               transform={menuOpen ? "rotate(-45deg) translate(5px, -5px)" : "none"}
             />
-          </Box>
+          </button>
         </Flex>
 
         {/* Mobile dropdown menu */}

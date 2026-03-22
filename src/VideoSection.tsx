@@ -242,7 +242,6 @@ const VideoSection = () => {
                   border: "1px solid #e8e4df",
                   paddingLeft: "16px",
                   fontFamily: "inherit",
-                  outline: "none",
                 }}
               />
               <Box
