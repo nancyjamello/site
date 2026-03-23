@@ -383,12 +383,6 @@ const App = () => {
           <Text fontSize="md" fontWeight="500" color="white" mb="4px">
             Work it Out
           </Text>
-          <Text fontSize="md" fontWeight="300" color="rgba(255,255,255,0.85)">
-            P.O. Box 2294
-          </Text>
-          <Text fontSize="md" fontWeight="300" color="rgba(255,255,255,0.85)">
-            Saratoga, CA 95070
-          </Text>
         </Box>
       </Box>
 
