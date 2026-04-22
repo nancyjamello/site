@@ -36,6 +36,8 @@ interface VideoSectionProps {
   title?: string;
   requirePassword?: boolean;
   actionLabel?: string;
+  showLibrary?: boolean;
+  emptyStateText?: string;
 }
 
 function parseRss(xml: string): YouTubeVideo[] {
@@ -64,6 +66,8 @@ const VideoSection = ({
   title = "Nancy’s Video Library",
   requirePassword = true,
   actionLabel = "Unlock",
+  showLibrary = true,
+  emptyStateText = "No videos found.",
 }: VideoSectionProps) => {
   // gate state
   const [unlocked, setUnlocked] = useState(false);
@@ -236,7 +240,9 @@ const VideoSection = ({
           textAlign="center"
         >
           {unlocked
-            ? "Click any video to watch. Use the fullscreen button for native fullscreen."
+            ? showLibrary
+              ? "Click any video to watch. Use the fullscreen button for native fullscreen."
+              : emptyStateText
             : requirePassword
               ? "Enter your password to access the video collection."
               : "Click Open to access the video collection."}
@@ -337,7 +343,7 @@ const VideoSection = ({
       )}
 
       {/* ── Video grid (only rendered after unlock) ── */}
-      {unlocked && (
+      {unlocked && showLibrary && (
         <Box className="fade-in">
           {loading ? (
             <Box display="flex" justifyContent="center" py="60px">
@@ -345,7 +351,7 @@ const VideoSection = ({
             </Box>
           ) : videos.length === 0 ? (
             <Text color="#6b6560" textAlign="center" py="60px">
-              No videos found.
+              {emptyStateText}
             </Text>
           ) : (
             <SimpleGrid columns={{ base: 1, sm: 2, md: 3 }} gap="20px">

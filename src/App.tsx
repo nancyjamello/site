@@ -292,7 +292,10 @@ const App = () => {
         }}
       >
         <Box maxW="1200px" mx="auto" position="relative" zIndex="1">
-          <VideoSection />
+          <VideoSection
+            showLibrary={false}
+            emptyStateText="No YouTube playlists are currently listed here."
+          />
           <Box h={{ base: "40px", md: "56px" }} />
           <VideoSection
             title="Ruth Barati’s Video Library"
