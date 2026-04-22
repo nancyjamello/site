@@ -354,7 +354,7 @@ const App = () => {
             mb="40px"
             lineHeight="1.8"
           >
-            Yoga DVDs and Meditation CDs can be found on YouTube from the above Video Libraries
+            Yoga DVDs and Meditation CDs can be found on YouTube from the above Video Libraries.
           </Text>
 
           <Flex direction="column" gap="20px" textAlign="left">
