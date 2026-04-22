@@ -291,14 +291,6 @@ const App = () => {
           backgroundPosition: "center center",
         }}
       >
-        <Box
-          position="absolute"
-          top="0"
-          left="0"
-          w="100%"
-          h="100%"
-          bg="rgba(255,255,255,0.88)"
-        />
         <Box maxW="1200px" mx="auto" position="relative" zIndex="1">
           <VideoSection />
         </Box>
