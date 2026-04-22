@@ -328,7 +328,7 @@ const App = () => {
               },
               {
                 title: "Ruth Barati's Relax and Renew Meditation - Energizing Meditation - Audio Only",
-                url: "https://www.youtube.com/watch?v=xFYXwhINNr8&list=PLdY4OxKzOvagluk8aaRlut0rZqxE2Iab_",
+                url: "https://www.youtube.com/playlist?list=PLdY4OxKzOvagluk8aaRlut0rZqxE2Iab_",
               },
             ]}
           />
