@@ -182,38 +182,48 @@ const VideoSection = () => {
       )}
 
       {/* ── Section heading ── */}
-      <Text
-        fontSize="xs"
-        fontWeight="500"
-        letterSpacing="0.2em"
-        color="#999"
-        textTransform="uppercase"
-        mb="12px"
-        textAlign="center"
-      >
-        Watch
-      </Text>
-      <Heading
-        as="h2"
-        fontSize={{ base: "xl", md: "2xl" }}
-        fontWeight="600"
-        color="#2d2d2d"
-        mb="8px"
-        textAlign="center"
-      >
-        Video Library
-      </Heading>
-      <Text
-        fontSize="sm"
-        fontWeight="300"
-        color="#6b6560"
-        textAlign="center"
+      <Box
+        maxW="700px"
+        mx="auto"
         mb="40px"
+        px={{ base: "20px", md: "28px" }}
+        py={{ base: "16px", md: "20px" }}
+        bg="rgba(255,255,255,0.58)"
+        borderRadius="lg"
+        backdropFilter="blur(6px)"
       >
-        {unlocked
-          ? "Click any video to watch. Use the fullscreen button for native fullscreen."
-          : "Enter your password to access the video collection."}
-      </Text>
+        <Text
+          fontSize="xs"
+          fontWeight="500"
+          letterSpacing="0.2em"
+          color="#666"
+          textTransform="uppercase"
+          mb="12px"
+          textAlign="center"
+        >
+          Watch
+        </Text>
+        <Heading
+          as="h2"
+          fontSize={{ base: "xl", md: "2xl" }}
+          fontWeight="600"
+          color="#2d2d2d"
+          mb="8px"
+          textAlign="center"
+        >
+          Video Library
+        </Heading>
+        <Text
+          fontSize="sm"
+          fontWeight="300"
+          color="#4f4a45"
+          textAlign="center"
+        >
+          {unlocked
+            ? "Click any video to watch. Use the fullscreen button for native fullscreen."
+            : "Enter your password to access the video collection."}
+        </Text>
+      </Box>
 
       {/* ── Password gate ── */}
       {!unlocked && (
