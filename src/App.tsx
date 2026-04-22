@@ -419,9 +419,6 @@ const App = () => {
           >
             <em>Contact me for more information and to order yoga DVDs.</em>
           </Text>
-          <Text fontSize="md" fontWeight="500" color="white" mb="4px">
-            Work it Out
-          </Text>
         </Box>
       </Box>
 
