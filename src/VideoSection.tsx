@@ -398,6 +398,8 @@ const VideoSection = ({
                   isExternal
                   textDecoration="none"
                   _hover={{ textDecoration: "none" }}
+                  display="block"
+                  h="100%"
                 >
                   <Box
                     bg="white"
@@ -409,6 +411,9 @@ const VideoSection = ({
                       transform: "translateY(-2px)",
                       boxShadow: "0 4px 12px rgba(0,0,0,0.08)",
                     }}
+                    h="100%"
+                    display="flex"
+                    flexDirection="column"
                   >
                     <Box
                       bg="linear-gradient(135deg, #94a7ab 0%, rgb(192, 85, 118) 100%)"
@@ -420,12 +425,12 @@ const VideoSection = ({
                       textAlign="center"
                       px="20px"
                     >
-                      <Text fontSize="lg" fontWeight="500" lineHeight="1.4">
+                      <Text fontSize="lg" fontWeight="500" lineHeight="1.4" whiteSpace="normal">
                         {playlist.title}
                       </Text>
                     </Box>
-                    <Box p="12px">
-                      <Text fontWeight="500" color="#2d2d2d" fontSize="sm">
+                    <Box p="12px" flex="1" display="flex" flexDirection="column" justifyContent="space-between">
+                      <Text fontWeight="500" color="#2d2d2d" fontSize="sm" whiteSpace="normal">
                         {playlist.title}
                       </Text>
                       <Text color="#aaa" fontSize="xs" mt="4px">
