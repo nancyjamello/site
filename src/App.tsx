@@ -292,7 +292,7 @@ const App = () => {
       >
         <Box maxW="1200px" mx="auto" position="relative" zIndex="1">
           <VideoSection
-            title="Ruth Barati Video Library"
+            title="Ruth Barati’s Video Library"
             requirePassword={false}
             actionLabel="Open"
           />
