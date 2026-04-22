@@ -24,6 +24,11 @@ const DVDS = [
     description: "Classic yoga instruction",
   },
   {
+    title: "Yoga with Ruth Barati",
+    year: "1996",
+    description: "Beginner and Intermediate 1.5 Hour Classes with Ruth",
+  },
+  {
     title: "Ruth\u2019s Relax and Renew Meditations",
     year: "",
     description: "Guided meditation audio CD",
