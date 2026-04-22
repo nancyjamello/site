@@ -279,6 +279,22 @@ const App = () => {
         </Box>
       </Box>
 
+      {/* ─── Videos duplicate ─── */}
+      <Box
+        py={{ base: "60px", md: "100px" }}
+        px={{ base: "20px", md: "40px" }}
+        position="relative"
+        style={{
+          backgroundImage: `url(${IMG("hero-meditation.jpg")})`,
+          backgroundSize: "cover",
+          backgroundPosition: "center center",
+        }}
+      >
+        <Box maxW="1200px" mx="auto" position="relative" zIndex="1">
+          <VideoSection />
+        </Box>
+      </Box>
+
       {/* ─── Videos ─── */}
       <Box
         id="videos"
