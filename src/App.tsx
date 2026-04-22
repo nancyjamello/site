@@ -8,14 +8,14 @@ const BLUE_DARK = "#7a9195";
 
 const DVDS = [
   {
-    title: "Yoga with Nancy",
-    year: "2002",
-    description: "Two one-hour yoga classes included",
-  },
-  {
     title: "Yoga for the Blind and Visually Impaired",
     year: "2009",
     description: "Adaptive yoga instruction",
+  },
+  {
+    title: "Yoga with Nancy",
+    year: "2002",
+    description: "Two one-hour yoga classes included",
   },
   {
     title: "Yoga with Nancy / Work it Out Old School",
