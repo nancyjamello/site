@@ -313,6 +313,16 @@ const App = () => {
               "Yoga with Ruth Barati",
               "Meditation with Ruth Barati",
             ]}
+            playlists={[
+              {
+                title: "Yoga With Ruth Barati",
+                url: "https://www.youtube.com/playlist?list=PLdY4OxKzOvajNSzaxg6aECJNpcJTsGTt3",
+              },
+              {
+                title: "Ruth Barati's Relax and Renew Meditation - Energizing Meditation - Audio Only",
+                url: "https://www.youtube.com/watch?v=xFYXwhINNr8&list=PLdY4OxKzOvagluk8aaRlut0rZqxE2Iab_",
+              },
+            ]}
           />
         </Box>
       </Box>
