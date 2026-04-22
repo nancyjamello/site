@@ -8,7 +8,7 @@ const BLUE_DARK = "#7a9195";
 
 const DVDS = [
   {
-    title: "Yoga for the Blind and Visually Impaired",
+    title: "Yoga for the Blind and Visually Impaired with Nancy",
     year: "2009",
     description: "Adaptive yoga instruction",
   },
