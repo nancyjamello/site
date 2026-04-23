@@ -286,6 +286,19 @@ const App = () => {
             In addition to Yoga, Nancy has taught cardiac rehabilitation, senior
             fitness, swimming and dance.
           </Text>
+
+          <Box mt={{ base: "40px", md: "56px" }} px={{ base: "20px", md: "80px" }}>
+            <Box h="1px" bg="rgba(255,255,255,0.35)" />
+            <Flex justify="center" mt="-10px">
+              <Box
+                w="20px"
+                h="20px"
+                borderRadius="full"
+                bg="rgba(255,255,255,0.22)"
+                border="1px solid rgba(255,255,255,0.45)"
+              />
+            </Flex>
+          </Box>
         </Box>
       </Box>
 
