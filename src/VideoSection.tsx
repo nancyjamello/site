@@ -44,6 +44,7 @@ interface VideoSectionProps {
   prioritizedTitles?: string[];
   playlists?: PlaylistLink[];
   excludedTitleKeywords?: string[];
+  showIndividualVideos?: boolean;
 }
 
 function filterVideos(videos: YouTubeVideo[], excludedTitleKeywords: string[]): YouTubeVideo[] {
@@ -105,6 +106,7 @@ const VideoSection = ({
   prioritizedTitles = [],
   playlists = [],
   excludedTitleKeywords = [],
+  showIndividualVideos = false,
 }: VideoSectionProps) => {
   // gate state
   const [unlocked, setUnlocked] = useState(false);
@@ -156,7 +158,7 @@ const VideoSection = ({
   const handleSubmit = async () => {
     if (!requirePassword) {
       setUnlocked(true);
-      fetchVideos();
+      if (showIndividualVideos) fetchVideos();
       return;
     }
 
@@ -168,7 +170,7 @@ const VideoSection = ({
       setStatusColor("#94a7ab");
       setTimeout(() => {
         setUnlocked(true);
-        fetchVideos();
+        if (showIndividualVideos) fetchVideos();
       }, 400);
     } else {
       const remaining = attempts - 1;
@@ -389,7 +391,7 @@ const VideoSection = ({
                 md: playlists.length <= 2 ? playlists.length : 3,
               }}
               gap="20px"
-              mb={videos.length > 0 ? "20px" : "0"}
+              mb={showIndividualVideos && videos.length > 0 ? "20px" : "0"}
             >
               {playlists.map((playlist) => (
                 <Link
@@ -445,93 +447,95 @@ const VideoSection = ({
             </SimpleGrid>
           )}
 
-          {loading ? (
-            <Box display="flex" justifyContent="center" py="60px">
-              <Spinner size="lg" color="#2d2d2d" />
-            </Box>
-          ) : videos.length === 0 ? (
-            playlists.length === 0 ? (
-              <Text color="#6b6560" textAlign="center" py="60px">
-                No videos found.
-              </Text>
-            ) : null
-          ) : (
-            <SimpleGrid columns={{ base: 1, sm: 2, md: 3 }} gap="20px">
-              {videos.map((video) => (
-                <Box
-                  key={video.videoId}
-                  bg="white"
-                  borderRadius="md"
-                  border="1px solid #e8e4df"
-                  overflow="hidden"
-                  cursor="pointer"
-                  onClick={() => setActiveVideo(video.videoId)}
-                  transition="transform 0.2s, box-shadow 0.2s"
-                  _hover={{
-                    transform: "translateY(-2px)",
-                    boxShadow: "0 4px 12px rgba(0,0,0,0.08)",
-                  }}
-                >
-                  <Box position="relative" paddingTop="56.25%">
-                    <img
-                      src={video.thumbnail}
-                      alt={video.title}
-                      style={{
-                        position: "absolute",
-                        top: 0,
-                        left: 0,
-                        width: "100%",
-                        height: "100%",
-                        objectFit: "cover",
-                      }}
-                    />
-                    {/* play icon overlay */}
-                    <Box
-                      position="absolute"
-                      top="50%"
-                      left="50%"
-                      transform="translate(-50%, -50%)"
-                      bg="rgba(0,0,0,0.5)"
-                      borderRadius="full"
-                      w="44px"
-                      h="44px"
-                      display="flex"
-                      alignItems="center"
-                      justifyContent="center"
-                    >
-                      <Box
-                        w="0"
-                        h="0"
-                        borderLeft="14px solid white"
-                        borderTop="9px solid transparent"
-                        borderBottom="9px solid transparent"
-                        ml="3px"
+          {showIndividualVideos && (
+            loading ? (
+              <Box display="flex" justifyContent="center" py="60px">
+                <Spinner size="lg" color="#2d2d2d" />
+              </Box>
+            ) : videos.length === 0 ? (
+              playlists.length === 0 ? (
+                <Text color="#6b6560" textAlign="center" py="60px">
+                  No videos found.
+                </Text>
+              ) : null
+            ) : (
+              <SimpleGrid columns={{ base: 1, sm: 2, md: 3 }} gap="20px">
+                {videos.map((video) => (
+                  <Box
+                    key={video.videoId}
+                    bg="white"
+                    borderRadius="md"
+                    border="1px solid #e8e4df"
+                    overflow="hidden"
+                    cursor="pointer"
+                    onClick={() => setActiveVideo(video.videoId)}
+                    transition="transform 0.2s, box-shadow 0.2s"
+                    _hover={{
+                      transform: "translateY(-2px)",
+                      boxShadow: "0 4px 12px rgba(0,0,0,0.08)",
+                    }}
+                  >
+                    <Box position="relative" paddingTop="56.25%">
+                      <img
+                        src={video.thumbnail}
+                        alt={video.title}
+                        style={{
+                          position: "absolute",
+                          top: 0,
+                          left: 0,
+                          width: "100%",
+                          height: "100%",
+                          objectFit: "cover",
+                        }}
                       />
+                      {/* play icon overlay */}
+                      <Box
+                        position="absolute"
+                        top="50%"
+                        left="50%"
+                        transform="translate(-50%, -50%)"
+                        bg="rgba(0,0,0,0.5)"
+                        borderRadius="full"
+                        w="44px"
+                        h="44px"
+                        display="flex"
+                        alignItems="center"
+                        justifyContent="center"
+                      >
+                        <Box
+                          w="0"
+                          h="0"
+                          borderLeft="14px solid white"
+                          borderTop="9px solid transparent"
+                          borderBottom="9px solid transparent"
+                          ml="3px"
+                        />
+                      </Box>
+                    </Box>
+
+                    <Box p="12px">
+                      <Text
+                        fontWeight="500"
+                        color="#2d2d2d"
+                        fontSize="sm"
+                        lineClamp={2}
+                      >
+                        {video.title}
+                      </Text>
+                      {video.published && (
+                        <Text color="#aaa" fontSize="xs" mt="4px">
+                          {new Date(video.published).toLocaleDateString("en-US", {
+                            year: "numeric",
+                            month: "short",
+                            day: "numeric",
+                          })}
+                        </Text>
+                      )}
                     </Box>
                   </Box>
-
-                  <Box p="12px">
-                    <Text
-                      fontWeight="500"
-                      color="#2d2d2d"
-                      fontSize="sm"
-                      lineClamp={2}
-                    >
-                      {video.title}
-                    </Text>
-                    {video.published && (
-                      <Text color="#aaa" fontSize="xs" mt="4px">
-                        {new Date(video.published).toLocaleDateString("en-US", {
-                          year: "numeric",
-                          month: "short",
-                          day: "numeric",
-                        })}
-                      </Text>
-                    )}
-                  </Box>
-                </Box>
-              ))}
-            </SimpleGrid>
+                ))}
+              </SimpleGrid>
+            )
           )}
         </Box>
       )}
