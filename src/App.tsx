@@ -287,7 +287,7 @@ const App = () => {
             fitness, swimming and dance.
           </Text>
 
-          <Box mt={{ base: "40px", md: "56px" }} px={{ base: "20px", md: "80px" }}>
+          <Box mt={{ base: "24px", md: "32px" }} px={{ base: "20px", md: "80px" }}>
             <Box h="1px" bg="rgba(255,255,255,0.35)" />
             <Flex justify="center" mt="-10px">
               <Box
