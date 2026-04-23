@@ -8,6 +8,11 @@ const BLUE_DARK = "#7a9195";
 
 const DVDS = [
   {
+    title: "Breathing Exercises and Meditation with Nancy",
+    year: "2020-2026",
+    description: "Short exercises to relax and renew",
+  },
+  {
     title: "Yoga for the Blind and Visually Impaired with Nancy",
     year: "2009",
     description: "Adaptive yoga instruction",
@@ -15,18 +20,18 @@ const DVDS = [
   {
     title: "Yoga with Nancy",
     year: "2002",
-    description: "Two one-hour yoga classes included",
+    description: "Two 60 minute Yoga instruction sessions",
   },
   {
-    title: "Yoga with Nancy / Work it Out Old School",
+    title: "Work it Out - Yoga with Nancy",
     subtitle: "Legs and Sun / Neck and Back",
     year: "1991",
-    description: "Classic yoga instruction",
+    description: "Eight 30 minute Yoga instruction sessions (Sessions 1-4 and 6-9)",
   },
   {
     title: "Yoga with Ruth Barati",
     year: "1996",
-    description: "Beginner and Intermediate 1.5 Hour Classes with Ruth",
+    description: "Eight 90 minute Beginner and Intermediate classes with Ruth",
   },
   {
     title: "Ruth\u2019s Relax and Renew Meditations",
@@ -267,9 +272,9 @@ const App = () => {
             lineHeight="2"
             mb="16px"
           >
-            Nancy Portugal Jamello began studying Yoga in 1968 and has taught
-            in Yoga the Silicon Valley from 1984 through 2020. Nancy studied
-            with a variety of instructors and enjoys combining styles.
+            Nancy Portugal Jamello began studying Yoga in 1968 and taught Yoga
+            in the Silicon Valley from 1984 through 2020. Nancy studied with a
+            variety of instructors and enjoys combining styles.
           </Text>
           <Text
             fontSize={{ base: "md", md: "lg" }}
