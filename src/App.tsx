@@ -5,6 +5,7 @@ import VideoSection from "./VideoSection";
 const BLUE = "#94a7ab";
 const WINE = "rgb(192, 85, 118)";
 const BLUE_DARK = "#7a9195";
+const ABOUT_BG = WINE;
 
 const DVDS = [
   {
@@ -250,7 +251,7 @@ const App = () => {
         id="about"
         py={{ base: "60px", md: "100px" }}
         px={{ base: "20px", md: "40px" }}
-        bg={BLUE}
+        bg={ABOUT_BG}
       >
         <Box maxW="900px" mx="auto" textAlign="center">
           <Heading
