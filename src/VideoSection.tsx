@@ -124,6 +124,13 @@ const VideoSection = ({
   const [loading, setLoading] = useState(false);
   const [activeVideo, setActiveVideo] = useState<string | null>(null);
 
+  const handleClose = () => {
+    setUnlocked(false);
+    setPassword("");
+    setStatusMsg("");
+    setActiveVideo(null);
+  };
+
   // close fullscreen overlay on Escape
   useEffect(() => {
     if (!activeVideo) return;
@@ -537,6 +544,26 @@ const VideoSection = ({
               </SimpleGrid>
             )
           )}
+
+          <Box maxW="460px" mx="auto" mt="24px">
+            <Button
+              onClick={handleClose}
+              style={{
+                width: "100%",
+                height: "48px",
+                backgroundColor: "#2d2d2d",
+                color: "white",
+                border: "none",
+                borderRadius: "6px",
+                fontSize: "16px",
+                fontWeight: "400",
+                cursor: "pointer",
+                fontFamily: "inherit",
+              }}
+            >
+              Close
+            </Button>
+          </Box>
         </Box>
       )}
     </>
