@@ -340,7 +340,7 @@ const App = () => {
                 borderLeft="4px solid rgba(255,255,255,0.4)"
                 borderRadius="md"
               >
-                <Text fontSize="md" fontWeight="500" color="white" mb="2px">
+                <Text fontSize="lg" fontWeight="500" color="white" mb="2px">
                   {dvd.title}
                   {dvd.year && (
                     <Text as="span" fontSize="sm" fontWeight="300" color="rgba(255,255,255,0.6)" ml="8px">
@@ -349,11 +349,11 @@ const App = () => {
                   )}
                 </Text>
                 {"subtitle" in dvd && dvd.subtitle && (
-                  <Text fontSize="sm" fontWeight="400" color="rgba(255,255,255,0.7)" mb="4px">
+                  <Text fontSize="md" fontWeight="400" color="rgba(255,255,255,0.7)" mb="4px">
                     {dvd.subtitle}
                   </Text>
                 )}
-                <Text fontSize="sm" fontWeight="300" fontStyle="italic" color="rgba(255,255,255,0.7)">
+                <Text fontSize="md" fontWeight="300" fontStyle="italic" color="rgba(255,255,255,0.7)">
                   {dvd.description}
                 </Text>
               </Box>
