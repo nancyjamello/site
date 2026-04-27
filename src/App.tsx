@@ -407,6 +407,12 @@ const App = () => {
               {
                 title: "Yoga With Nancy Jamello",
                 url: "https://youtube.com/playlist?list=PLdY4OxKzOvajmsppAZqyWH_jAm2yM9pun&si=GKU9kzcp6YcYZ78g",
+                details: [
+                  "Yoga with Nancy 1 x 90min (2017)",
+                  "Yoga for the Blind and Visually Impaired (2009)",
+                  "Yoga with Nancy 2 x 60min (2002)",
+                  "Work it Out 8 x 30min (1991)",
+                ],
               },
               {
                 title: "Breathing Exercises and Meditation With Nancy",

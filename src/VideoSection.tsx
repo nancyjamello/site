@@ -35,6 +35,7 @@ interface YouTubeVideo {
 interface PlaylistLink {
   title: string;
   url: string;
+  details?: string[];
 }
 
 interface VideoSectionProps {
@@ -441,9 +442,19 @@ const VideoSection = ({
                       </Text>
                     </Box>
                     <Box p="12px" flex="1" display="flex" flexDirection="column" justifyContent="space-between">
-                      <Text fontWeight="500" color="#2d2d2d" fontSize="sm" whiteSpace="normal">
-                        {playlist.title}
-                      </Text>
+                      {playlist.details && playlist.details.length > 0 ? (
+                        <Box as="ul" pl="18px" m="0" color="#2d2d2d">
+                          {playlist.details.map((detail) => (
+                            <Text as="li" key={detail} fontWeight="400" fontSize="sm" whiteSpace="normal" mb="4px">
+                              {detail}
+                            </Text>
+                          ))}
+                        </Box>
+                      ) : (
+                        <Text fontWeight="500" color="#2d2d2d" fontSize="sm" whiteSpace="normal">
+                          {playlist.title}
+                        </Text>
+                      )}
                       <Text color="#aaa" fontSize="xs" mt="4px">
                         Open YouTube playlist
                       </Text>
