@@ -272,7 +272,7 @@ const VideoSection = ({
         </Text>
         <Heading
           as="h2"
-          fontSize={{ base: "xl", md: "2xl" }}
+          fontSize={{ base: "2xl", md: "3xl" }}
           fontWeight="600"
           color="#2d2d2d"
           mb="8px"
@@ -281,7 +281,7 @@ const VideoSection = ({
           {title}
         </Heading>
         <Text
-          fontSize="17px"
+          fontSize={{ base: "md", md: "lg" }}
           fontWeight="300"
           color="#4f4a45"
           textAlign="center"
@@ -290,7 +290,7 @@ const VideoSection = ({
             ? "Click any playlist below to view the associated videos on YouTube."
             : requirePassword
               ? "Enter your password to access the video collection."
-              : "Click Open to view video playlists."}
+              : "Click Open to view the video playlists."}
         </Text>
       </Box>
 

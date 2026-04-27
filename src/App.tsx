@@ -17,7 +17,7 @@ const DVDS = [
   {
     title: "Yoga with Nancy",
     year: "2017",
-    description: "One 90 minute Yoga instruction session",
+    description: "One 90 minute yoga instruction session",
   },
   {
     title: "Yoga for the Blind and Visually Impaired with Nancy",
@@ -27,18 +27,18 @@ const DVDS = [
   {
     title: "Yoga with Nancy",
     year: "2002",
-    description: "Two 60 minute Yoga instruction sessions",
+    description: "Two 60 minute yoga instruction sessions",
   },
   {
-    title: "Work it Out - Yoga with Nancy",
+    title: "Work It Out - Yoga with Nancy",
     subtitle: "Legs and Sun / Neck and Back",
     year: "1991",
-    description: "Eight 30 minute Yoga instruction sessions (Sessions 1-4 and 6-9)",
+    description: "Eight 30 minute yoga instruction sessions (sessions 1–4 and 6–9)",
   },
   {
     title: "Yoga with Ruth Barati",
     year: "1996",
-    description: "Eight 90 minute Beginner and Intermediate classes with Ruth",
+    description: "Eight 90 minute beginner and intermediate classes with Ruth",
   },
   {
     title: "Ruth\u2019s Relax and Renew Meditations",
@@ -243,7 +243,7 @@ const App = () => {
             color="white"
             mb="16px"
           >
-            Contemporary Blend of Traditional and Nontraditional Hatha Yoga
+            Contemporary blend of traditional and nontraditional hatha yoga
           </Heading>
           <Text
             fontSize="17px"
@@ -327,7 +327,7 @@ const App = () => {
         <Box maxW="800px" mx="auto" textAlign="center">
           <Heading
             as="h2"
-            fontSize={{ base: "xl", md: "2xl" }}
+            fontSize={{ base: "2xl", md: "3xl" }}
             fontWeight="600"
             color="white"
             mb="16px"
@@ -335,13 +335,13 @@ const App = () => {
             Published Works
           </Heading>
           <Text
-            fontSize="md"
+            fontSize={{ base: "md", md: "lg" }}
             fontWeight="300"
             color="rgba(255,255,255,0.85)"
             mb="40px"
             lineHeight="1.8"
           >
-            Yoga DVDs and Meditation CDs can be found on YouTube from the below Video Libraries.
+            Yoga DVDs and meditation CDs can be found on YouTube in the video libraries below.
           </Text>
 
           <Flex direction="column" gap="20px" textAlign="left">
@@ -353,20 +353,20 @@ const App = () => {
                 borderLeft="4px solid rgba(255,255,255,0.4)"
                 borderRadius="md"
               >
-                <Text fontSize="lg" fontWeight="500" color="white" mb="2px">
+                <Text fontSize={{ base: "lg", md: "xl" }} fontWeight="500" color="white" mb="2px">
                   {dvd.title}
                   {dvd.year && (
-                    <Text as="span" fontSize="sm" fontWeight="300" color="rgba(255,255,255,0.6)" ml="8px">
+                    <Text as="span" fontSize="md" fontWeight="300" color="rgba(255,255,255,0.6)" ml="8px">
                       ({dvd.year})
                     </Text>
                   )}
                 </Text>
                 {"subtitle" in dvd && dvd.subtitle && (
-                  <Text fontSize="md" fontWeight="400" color="rgba(255,255,255,0.7)" mb="4px">
+                  <Text fontSize={{ base: "md", md: "lg" }} fontWeight="400" color="rgba(255,255,255,0.7)" mb="4px">
                     {dvd.subtitle}
                   </Text>
                 )}
-                <Text fontSize="md" fontWeight="300" fontStyle="italic" color="rgba(255,255,255,0.7)">
+                <Text fontSize={{ base: "md", md: "lg" }} fontWeight="300" fontStyle="italic" color="rgba(255,255,255,0.7)">
                   {dvd.description}
                 </Text>
               </Box>
@@ -442,7 +442,7 @@ const App = () => {
           <Box id="contact" flex="1" textAlign="center" px={{ base: "0", md: "24px" }}>
             <Heading
               as="h2"
-              fontSize={{ base: "xl", md: "2xl" }}
+              fontSize={{ base: "2xl", md: "3xl" }}
               fontWeight="600"
               color="white"
               mb="16px"
@@ -450,7 +450,7 @@ const App = () => {
               Contact
             </Heading>
             <Text
-              fontSize="md"
+              fontSize={{ base: "md", md: "lg" }}
               fontWeight="300"
               color="rgba(255,255,255,0.85)"
               lineHeight="1.8"
@@ -493,7 +493,7 @@ const App = () => {
           <Box id="donate" flex="1" textAlign="center" px={{ base: "0", md: "24px" }}>
             <Heading
               as="h2"
-              fontSize={{ base: "xl", md: "2xl" }}
+              fontSize={{ base: "2xl", md: "3xl" }}
               fontWeight="600"
               color="white"
               mb="16px"
@@ -501,7 +501,7 @@ const App = () => {
               Donate
             </Heading>
             <Text
-              fontSize="md"
+              fontSize={{ base: "md", md: "lg" }}
               fontWeight="300"
               color="rgba(255,255,255,0.85)"
               lineHeight="1.8"
