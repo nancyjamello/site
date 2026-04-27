@@ -3,7 +3,7 @@ import { Box, Flex, Heading, Text, Link } from "@chakra-ui/react";
 import VideoSection from "./VideoSection";
 
 const BLUE = "#94a7ab";
-const WINE = "rgb(192, 85, 118)";
+const WINE = "#B57B8C";
 const BLUE_DARK = "#7a9195";
 const ABOUT_BG = WINE;
 const SECTION_ROSE = "#7ba9b5";
