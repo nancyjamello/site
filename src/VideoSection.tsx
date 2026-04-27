@@ -418,9 +418,9 @@ const VideoSection = ({
                   h="100%"
                 >
                   <Box
-                    bg="white"
+                    bg="rgba(255,255,255,0.58)"
                     borderRadius="md"
-                    border="1px solid #e8e4df"
+                    border="1px solid rgba(255,255,255,0.45)"
                     overflow="hidden"
                     transition="transform 0.2s, box-shadow 0.2s"
                     _hover={{
@@ -494,9 +494,9 @@ const VideoSection = ({
                 {videos.map((video) => (
                   <Box
                     key={video.videoId}
-                    bg="white"
+                    bg="rgba(255,255,255,0.58)"
                     borderRadius="md"
-                    border="1px solid #e8e4df"
+                    border="1px solid rgba(255,255,255,0.45)"
                     overflow="hidden"
                     cursor="pointer"
                     onClick={() => setActiveVideo(video.videoId)}
