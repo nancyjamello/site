@@ -39,6 +39,7 @@ interface PlaylistLink {
   backgroundImage?: string;
   backgroundPosition?: string;
   backgroundSize?: string;
+  backgroundMinH?: string;
 }
 
 interface VideoSectionProps {
@@ -436,7 +437,7 @@ const VideoSection = ({
                       backgroundSize={playlist.backgroundSize || "cover"}
                       backgroundPosition={playlist.backgroundPosition || "center"}
                       color="white"
-                      minH={playlist.backgroundImage ? "220px" : "180px"}
+                      minH={playlist.backgroundMinH || (playlist.backgroundImage ? "220px" : "180px")}
                       display="flex"
                       alignItems="center"
                       justifyContent="center"

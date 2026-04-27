@@ -437,6 +437,10 @@ const App = () => {
               {
                 title: "Yoga With Ruth Barati",
                 url: "https://www.youtube.com/playlist?list=PLdY4OxKzOvajNSzaxg6aECJNpcJTsGTt3",
+                backgroundImage: `${import.meta.env.BASE_URL}images/ruth-barati-widget-background.png`,
+                backgroundPosition: "center top",
+                backgroundSize: "contain",
+                backgroundMinH: "320px",
                 details: [
                   "8 x 90min Classes with Ruth (1996)"
                 ],
