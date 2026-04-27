@@ -437,6 +437,9 @@ const App = () => {
               {
                 title: "Yoga With Ruth Barati",
                 url: "https://www.youtube.com/playlist?list=PLdY4OxKzOvajNSzaxg6aECJNpcJTsGTt3",
+                details: [
+                  "8 x 90min Classes with Ruth (1996)"
+                ],
               },
               {
                 title: "Ruth Barati's Relax and Renew Meditation - Energizing Meditation - Audio Only",
