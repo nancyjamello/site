@@ -414,12 +414,12 @@ const App = () => {
         </Box>
       </Box>
 
-      {/* ─── Contact with blue background ─── */}
+      {/* ─── Contact with matching pink background ─── */}
       <Box
         id="contact"
         py={{ base: "60px", md: "100px" }}
         px={{ base: "20px", md: "40px" }}
-        bg={SECTION_ROSE}
+        bg={ABOUT_BG}
       >
         <Box maxW="800px" mx="auto" textAlign="center">
           <Heading
@@ -449,10 +449,10 @@ const App = () => {
       <Box
         py="24px"
         px="20px"
-        bg={BLUE_DARK}
+        bg="white"
         textAlign="center"
       >
-        <Text fontSize="xs" fontWeight="300" color="rgba(255,255,255,0.6)">
+        <Text fontSize="xs" fontWeight="300" color={WINE}>
           &copy; {new Date().getFullYear()} Nancy Portugal Jamello
         </Text>
       </Box>
