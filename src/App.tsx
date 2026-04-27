@@ -6,7 +6,7 @@ const BLUE = "#94a7ab";
 const WINE = "rgb(192, 85, 118)";
 const BLUE_DARK = "#7a9195";
 const ABOUT_BG = "#B57B8C";
-const SECTION_ROSE = "#7ba9b5";
+const SECTION_ROSE = "#8BB6C1";
 
 const DVDS = [
   {
