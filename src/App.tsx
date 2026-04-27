@@ -419,7 +419,7 @@ const App = () => {
               {
                 title: "Breathing Exercises and Meditation With Nancy",
                 url: "https://youtube.com/playlist?list=PLdY4OxKzOvahA4QMBBKCd73cswnCFYsWl&si=z4zZjbmHPGtOBBP3",
-                backgroundImage: `${import.meta.env.BASE_URL}images/work-it-out-session-eight-screenshot.png`,
+                backgroundImage: `${import.meta.env.BASE_URL}images/breathing-exercises-widget-background.png`,
                 backgroundPosition: "center 28%",
                 details: [
                   "15+ Quick Exercises With Nancy (2020-)"
