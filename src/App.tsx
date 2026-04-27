@@ -445,8 +445,8 @@ const App = () => {
               {
                 title: "Yoga With Ruth Barati",
                 url: "https://www.youtube.com/playlist?list=PLdY4OxKzOvajNSzaxg6aECJNpcJTsGTt3",
-                backgroundImage: `${import.meta.env.BASE_URL}images/ruth-barati-widget-background.png`,
-                backgroundPosition: "center top",
+                backgroundImage: `${import.meta.env.BASE_URL}images/ruth-barati-widget-background-2.png`,
+                backgroundPosition: "center center",
                 backgroundSize: "contain",
                 backgroundMinH: "220px",
                 details: [
