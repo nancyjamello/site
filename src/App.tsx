@@ -408,6 +408,7 @@ const App = () => {
                 title: "Yoga With Nancy Jamello",
                 url: "https://youtube.com/playlist?list=PLdY4OxKzOvajmsppAZqyWH_jAm2yM9pun&si=GKU9kzcp6YcYZ78g",
                 backgroundImage: `${import.meta.env.BASE_URL}images/work-it-out-session-eight-screenshot.png`,
+                backgroundPosition: "center 28%",
                 details: [
                   "Yoga With Nancy 1 x 90min (2017)",
                   "Yoga for the Blind and Visually Impaired (2009)",
