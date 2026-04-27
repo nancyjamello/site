@@ -251,9 +251,16 @@ const App = () => {
             letterSpacing="0.2em"
             color="rgba(255,255,255,0.8)"
             textTransform="uppercase"
+            mb="12px"
           >
             Saratoga &amp; San Jose, California
           </Text>
+          <Box
+            w="140px"
+            h="1px"
+            bg="rgba(255,255,255,0.7)"
+            mx="auto"
+          />
         </Box>
       </Box>
 
