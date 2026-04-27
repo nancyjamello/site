@@ -502,7 +502,7 @@ const App = () => {
               mb="24px"
             >
               <em>
-                If you enjoy Nancy&apos;s yoga instruction, please consider supporting by donating. Thank you.
+                Enjoy Nancy&apos;s yoga instruction? Please consider supporting by donating. Thank you
               </em>
             </Text>
             <Button
