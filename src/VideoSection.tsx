@@ -260,7 +260,7 @@ const VideoSection = ({
         backdropFilter="blur(6px)"
       >
         <Text
-          fontSize="xs"
+          fontSize="15px"
           fontWeight="500"
           letterSpacing="0.2em"
           color="#666"
@@ -281,7 +281,7 @@ const VideoSection = ({
           {title}
         </Heading>
         <Text
-          fontSize="sm"
+          fontSize="17px"
           fontWeight="300"
           color="#4f4a45"
           textAlign="center"
