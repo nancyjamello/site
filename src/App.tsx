@@ -474,6 +474,19 @@ const App = () => {
             </Button>
           </Box>
 
+          <Box display={{ base: "block", md: "none" }} mt="40px" mb="40px" px={{ base: "20px", md: "80px" }}>
+            <Box h="1px" bg="rgba(255,255,255,0.35)" />
+            <Flex justify="center" mt="-10px">
+              <Box
+                w="20px"
+                h="20px"
+                borderRadius="full"
+                bg="rgba(255,255,255,0.22)"
+                border="1px solid rgba(255,255,255,0.45)"
+              />
+            </Flex>
+          </Box>
+
           <Box display={{ base: "none", md: "flex" }} alignItems="center" justifyContent="center" px="8px">
             <Box h="140px" w="1px" bg="rgba(255,255,255,0.35)" position="relative">
               <Box
