@@ -440,7 +440,7 @@ const App = () => {
                 backgroundImage: `${import.meta.env.BASE_URL}images/ruth-barati-widget-background.png`,
                 backgroundPosition: "center top",
                 backgroundSize: "contain",
-                backgroundMinH: "320px",
+                backgroundMinH: "220px",
                 details: [
                   "8 x 90min Classes with Ruth (1996)"
                 ],
@@ -451,7 +451,7 @@ const App = () => {
                 backgroundImage: `${import.meta.env.BASE_URL}images/relax-renew-widget-background.png`,
                 backgroundPosition: "center top",
                 backgroundSize: "contain",
-                backgroundMinH: "320px",
+                backgroundMinH: "220px",
                 details: [
                   "3 Meditation Audio Sessions"
                 ],
