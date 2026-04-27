@@ -450,7 +450,7 @@ const VideoSection = ({
                       textAlign="center"
                       px="20px"
                     />
-                    <Box p="12px" flex="1" display="flex" flexDirection="column" justifyContent="space-between">
+                    <Box p="12px" flex="1" display="flex" flexDirection="column" justifyContent="flex-start">
                       <Text
                         fontWeight="500"
                         color="#2d2d2d"
@@ -471,7 +471,7 @@ const VideoSection = ({
                           ))}
                         </Box>
                       ) : null}
-                      <Text color="#aaa" fontSize="xs" mt="4px">
+                      <Text color="#aaa" fontSize="xs" mt="auto" pt="8px">
                         Open YouTube playlist
                       </Text>
                     </Box>
