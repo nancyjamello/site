@@ -502,7 +502,7 @@ const App = () => {
               mb="24px"
             >
               <em>
-                Support Nancy&apos;s work and video library.
+                If you enjoy Nancy&apos;s yoga instruction, please consider supporting by donating. Thank you.
               </em>
             </Text>
             <Button
