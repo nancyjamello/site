@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Box, Flex, Heading, Text, Link, Button } from "@chakra-ui/react";
+import { Box, Flex, Heading, Text, Link } from "@chakra-ui/react";
 import VideoSection from "./VideoSection";
 
 const BLUE = "#94a7ab";
@@ -567,20 +567,27 @@ const App = () => {
                 Enjoy Nancy&apos;s yoga instruction? Please consider supporting by donating. Thank you.
               </em>
             </Text>
-            <Button
-              as="a"
-              href="https://www.paypal.com/donate/?hosted_button_id=VGGFCGRE4V8JS"
-              target="_blank"
-              rel="noopener noreferrer"
-              bg="white"
-              color={WINE}
-              borderRadius="full"
-              px="32px"
-              fontWeight="500"
-              _hover={{ bg: "rgba(255,255,255,0.9)" }}
+            <Box
+              as="form"
+              action="https://www.paypal.com/donate"
+              method="post"
+              target="_top"
             >
-              Donate
-            </Button>
+              <input type="hidden" name="hosted_button_id" value="VGGFCGRE4V8JS" />
+              <input
+                type="image"
+                src="https://www.paypalobjects.com/en_US/i/btn/btn_donate_LG.gif"
+                name="submit"
+                title="PayPal - The safer, easier way to pay online!"
+                alt="Donate with PayPal button"
+              />
+              <img
+                alt=""
+                src="https://www.paypal.com/en_US/i/scr/pixel.gif"
+                width="1"
+                height="1"
+              />
+            </Box>
           </Box>
         </Flex>
       </Box>
