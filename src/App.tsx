@@ -568,6 +568,10 @@ const App = () => {
               </em>
             </Text>
             <Button
+              as="a"
+              href="https://www.paypal.com/donate/?hosted_button_id=VGGFCGRE4V8JS"
+              target="_blank"
+              rel="noopener noreferrer"
               bg="white"
               color={WINE}
               borderRadius="full"
